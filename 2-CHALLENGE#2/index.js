@@ -1,32 +1,10 @@
 /* Write your code below. Good luck! 🙂 */
 
-const calcAverage = (first, second, third) => (first + second + third)/3
+const calcTip = (bill) => bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2; 
 
-let scoreDolphins = calcAverage(44, 23, 71);
-let scoreKoalas = calcAverage(65, 54, 49);
+const bills = [125, 555, 44];
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])]
+const total = [(bills[0] + tips[0]), (bills[1] + tips[1]), (bills[2] + tips[2])];
 
-let scoreDolphins2 = calcAverage(85, 54, 41);
-let scoreKoalas2 = calcAverage(23, 34, 27);
-
-const checkWinner = (avgDolphins, avgKoalas) => {
-    let result;
-    
-    if(avgDolphins >= 2 * avgKoalas){
-        result = `Dolphins win (${avgDolphins} vs. ${avgKoalas})`;
-    } else if(avgKoalas >= 2 * avgDolphins){
-        result = `Koalas win (${avgKoalas} vs. ${avgDolphins})`;
-    } else{
-        result = `No team wins...`;
-    }
-    
-    console.log(result);
-}
-
-console.log(scoreDolphins);
-console.log(scoreKoalas);
-
-console.log(scoreDolphins2);
-console.log(scoreKoalas2);
-
-checkWinner(scoreDolphins, scoreKoalas);
-checkWinner(scoreDolphins2, scoreKoalas2);
+console.log(tips);
+console.log(total);
