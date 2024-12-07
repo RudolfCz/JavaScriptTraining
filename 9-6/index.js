@@ -1,14 +1,14 @@
 const rest = new Map();
-rest.set("name", "Classico Italiano");
-rest.set(1, "Firenze, Italy");
-console.log(rest.set(2, "Lisbon, Portugal"));
+rest.set("name", "Restauracja pod strumykiem");
+rest.set(1, "Cichosze, Poland");
+console.log(rest.set(2, "Lidzbark, Poland"));
 
 rest
-  .set("categories", ["Italian", "Pizzeria", "Vegetarian", "Organic"])
-  .set("open", 11)
-  .set("close", 23)
-  .set(true, "We are open :D")
-  .set(false, "We are closed :(");
+  .set("categories", ["Italian", "Pizzeria", "Organic"])
+  .set("open", 8)
+  .set("close", 22)
+  .set(true, "We are open")
+  .set(false, "We are closed");
 
 console.log(rest.get("name"));
 console.log(rest.get(true));
