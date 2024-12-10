@@ -20,4 +20,4 @@ transformer("JavaScript is the best!", oneWord);
 const high5 = function () {
   console.log("🙌");
 };
-["Jonas", "Martha", "Adam"].forEach(high5);
+["Rudolf", "Maciek", "Wojtek"].forEach(high5);
