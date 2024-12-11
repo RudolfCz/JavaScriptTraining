@@ -61,6 +61,16 @@ const poll = {
       console.log(this.answers);
     } else if (type === "string") {
       console.log(`Poll results are ${this.answers.join(", ")}`);
+      const sum = this.answers.reduce(
+        (accumulator, currentValue) => accumulator + currentValue,
+        0
+      );
+      const percentages = [];
+      for (let n = 0; n < 4; n++) {
+        percentages[n] = ((this.answers[n] / sum) * 100);
+        console.log(`Answer ${n + 1}: ${percentages[n]}%`);
+      }
+
     }
   },
 };
