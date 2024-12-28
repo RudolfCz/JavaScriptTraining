@@ -35,9 +35,6 @@ document.addEventListener("keydown", function (e) {
     closeModal();
   }
 });
-
-///////////////////////////////////////
-// Button scrolling
 btnScrollTo.addEventListener("click", function (e) {
   const s1coords = section1.getBoundingClientRect();
   console.log(s1coords);
@@ -51,8 +48,7 @@ btnScrollTo.addEventListener("click", function (e) {
     document.documentElement.clientHeight,
     document.documentElement.clientWidth
   );
-
-  // Scrolling
+  
   // window.scrollTo(
   //   s1coords.left + window.pageXOffset,
   //   s1coords.top + window.pageYOffset
