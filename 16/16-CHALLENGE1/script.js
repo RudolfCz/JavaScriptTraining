@@ -21,24 +21,28 @@ TEST COORDINATES 2: -33.933, 18.474
 */
 
 const whereAmI = function (lat, lng) {
-  fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lng}`)
-    .then(res => {
+  fetch(
+    `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lng}`
+  )
+    .then((res) => {
       if (!res.ok) throw new Error(`Problem with geocoding ${res.status}`);
       return res.json();
     })
-    .then(data => {
+    .then((data) => {
       console.log(data);
       console.log(`You are in ${data.city}, ${data.countryName}`);
 
-      return fetch(`https://countries-api-836d.onrender.com/countries/name/${data.country}`);
+      return fetch(
+        `https://countries-api-836d.onrender.com/countries/name/${data.country}`
+      );
     })
-    .then(res => {
+    .then((res) => {
       if (!res.ok) throw new Error(`Country not found (${res.status})`);
 
       return res.json();
     })
-    .then(data => renderCountry(data[0]))
-    .catch(err => console.error(`${err.message} 💥`));
+    .then((data) => renderCountry(data[0]))
+    .catch((err) => console.error(`${err.message} 💥`));
 };
 // whereAmI(52.508, 13.381);
 whereAmI(19.037, 72.873);
